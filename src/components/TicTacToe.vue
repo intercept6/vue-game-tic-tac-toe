@@ -13,6 +13,7 @@
       <div style="color:blue;" v-if="playerId === 1">「🔵プレイヤーさん、マスを選んでください」</div>
       <div style="color:red;" v-if="playerId === -1">「🔴プレイヤーさん、マスを選んでください」</div>
     </div>
+    <button class="btn" v-on:click="installBnr">ホーム画面に配置する</button>
   </div>
 </template>
 
@@ -138,6 +139,15 @@
         }
         // デフォルト値が存在しないので、引き分け
         return true
+      },
+      installBnr(){
+        let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+          e.preventDefault();
+          deferredPrompt = e;
+          deferredPrompt.prompt();
+        });
       }
     },
     props: {
@@ -166,5 +176,24 @@
     vertical-align: middle;
     font-size: 50px;
     cursor: pointer;
+  }
+
+  h1 {
+    text-shadow: 2px 2px 2px gray;
+  }
+  .btn {
+    position: relative;
+    font-size: 12px;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    transition: background-color .3s;
   }
 </style>
