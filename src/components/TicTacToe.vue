@@ -43,7 +43,6 @@
           const row = new Array(states.length).fill(0);
           states.splice(i, 1, row);
         }
-        console.log(states);
       },
       onSelect(rowsIndex, colsIndex) {
         let state = this.states[rowsIndex][colsIndex];
@@ -93,21 +92,19 @@
         // 斜めの判定1
         const skew1 = new Array(this.length);
         for(let i = 0; i < this.length; i++) {
-          for(let j = 0; j < this.length; j++) {
-            skew1[i] = this.states[i][j]
-          }
+          skew1[i] = this.states[i][i];
         }
         if(this.isLineFilled(skew1)) {
           return skew1[0];
         }
 
         // 斜めの判定2
+        console.log(this.states);
         const skew2 = new Array(this.length);
         for(let i = 0; i < this.length; i++) {
-          for(let j = this.length; j > 0; j--) {
-            skew2[i] = this.states[i][j]
-          }
+          skew2[i] = this.states[i][this.length - i - 1]
         }
+        // console.log(`skew2: ${skew2}`);
         if(this.isLineFilled(skew2)) {
           return skew2[0];
         }
