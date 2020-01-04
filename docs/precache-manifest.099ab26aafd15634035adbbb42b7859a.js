@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "fonts/NotoMono-Regular.22be6139.ttf"
   },
   {
-    "revision": "c9eecf1d55bf95ff3632c8faab528e9b",
+    "revision": "b684118042d5939d623ed2e177984b44",
     "url": "index.html"
   },
   {
