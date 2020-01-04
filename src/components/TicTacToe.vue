@@ -13,7 +13,7 @@
       <div style="color:blue;" v-if="playerId === 1">「🔵プレイヤーさん、マスを選んでください」</div>
       <div style="color:red;" v-if="playerId === -1">「🔴プレイヤーさん、マスを選んでください」</div>
     </div>
-    <button class="btn" v-on:click="installBnr">ホーム画面に配置する</button>
+<!--    <button class="btn" v-on:click="installBnr">ホーム画面に配置する</button>-->
   </div>
 </template>
 
@@ -140,15 +140,6 @@
         // デフォルト値が存在しないので、引き分け
         return true
       },
-      installBnr(){
-        let deferredPrompt;
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-          e.preventDefault();
-          deferredPrompt = e;
-          deferredPrompt.prompt();
-        });
-      }
     },
     props: {
       property: {
@@ -181,19 +172,62 @@
   h1 {
     text-shadow: 2px 2px 2px gray;
   }
-  .btn {
-    position: relative;
-    font-size: 12px;
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    overflow: hidden;
-    border-width: 0;
-    outline: none;
-    border-radius: 2px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-    background-color: #2ecc71;
-    color: #ecf0f1;
-    transition: background-color .3s;
-  }
+  /*.btn {*/
+  /*  position: relative;*/
+  /*  font-size: 12px;*/
+  /*  display: block;*/
+  /*  margin: 10px auto;*/
+  /*  padding: 10px 10px;*/
+  /*  overflow: hidden;*/
+  /*  border-width: 0;*/
+  /*  outline: none;*/
+  /*  border-radius: 2px;*/
+  /*  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);*/
+  /*  background-color: #2ecc71;*/
+  /*  color: #ecf0f1;*/
+  /*  transition: background-color .3s;*/
+  /*}*/
+
+  /*.btn:hover, .btn:focus {*/
+  /*  background-color: #27ae60;*/
+  /*}*/
+
+  /*.btn > * {*/
+  /*  position: relative;*/
+  /*}*/
+
+  /*.btn span {*/
+  /*  display: block;*/
+  /*  padding: 120px 24px;*/
+  /*}*/
+
+  /*.btn:before {*/
+  /*  content: "";*/
+
+  /*  position: absolute;*/
+  /*  top: 50%;*/
+  /*  left: 50%;*/
+  /*  display: block;*/
+  /*  width: 200px;*/
+  /*  padding: 50px 50px;*/
+  /*  border-radius: 100%;*/
+  /*  background-color: rgba(236, 240, 241, .3);*/
+  /*  -webkit-transform: translate(-50%, -50%);*/
+  /*  -moz-transform: translate(-50%, -50%);*/
+  /*  -ms-transform: translate(-50%, -50%);*/
+  /*  -o-transform: translate(-50%, -50%);*/
+  /*  transform: translate(-50%, -50%);*/
+  /*}*/
+
+  /*.btn:active:before {*/
+  /*  width: 120%;*/
+  /*  padding-top: 120%;*/
+
+  /*  transition: width .2s ease-out, padding-top .2s ease-out;*/
+  /*}*/
+
+  /*!* Styles, not important *!*/
+  /**, *:before, *:after {*/
+  /*  box-sizing: border-box;*/
+  /*}*/
 </style>
