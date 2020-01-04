@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Tic Tac Toe</h1>
-    <button @click="beforeinstallprompt">Install app</button>
     <table id="table">
       <tr v-for="(row, rowsIndex) in states">
         <td v-for="(state, colsIndex) in row" @click="onSelect(rowsIndex, colsIndex)">
@@ -139,17 +138,6 @@
         }
         // デフォルト値が存在しないので、引き分け
         return true
-      },
-      installBnr(){
-        let deferredPrompt;
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-          // Prevent Chrome 67 and earlier from automatically showing the prompt
-          e.preventDefault();
-          // Stash the event so it can be triggered later.
-          deferredPrompt = e;
-          deferredPrompt.prompt();
-        });
       }
     },
     props: {
