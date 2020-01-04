@@ -4,14 +4,14 @@
     <table id="table">
       <tr v-for="(row, rowsIndex) in states">
         <td v-for="(state, colsIndex) in row" @click="onSelect(rowsIndex, colsIndex)">
-          <div style="color:#f00; padding: 0; margin: 0;" v-if="state === 1">◯</div>
-          <div style="color:#00f; padding: 0; margin: 0;" v-if="state === -1">✕</div>
+          <div style="color:blue;" v-if="state === 1">🔵</div>
+          <div style="color:red;" v-if="state === -1">🔴</div>
         </td>
       </tr>
     </table>
     <div style="text-align:center;">
-      <div style="color:#f00;" v-if="playerId === 1">「◯ プレイヤーさん、マスを選んでください」</div>
-      <div style="color:#00f;" v-if="playerId === -1">「✕ プレイヤーさん、マスを選んでください」</div>
+      <div style="color:blue;" v-if="playerId === 1">「🔵プレイヤーさん、マスを選んでください」</div>
+      <div style="color:red;" v-if="playerId === -1">「🔴プレイヤーさん、マスを選んでください」</div>
     </div>
   </div>
 </template>
@@ -62,13 +62,13 @@
         if (winnerId !== 0) {
           this.initStates(this.states, this.length);
           let playerIds = {
-            1: '◯',
-            '-1': '✕'
+            1: '🔵',
+            '-1': '🔴'
           };
           this.$toasted.success(`${playerIds[winnerId]}さんの勝ちです。おめでとうございます！`, this.toastedOptions);
         } else if (this.isDraw()) {
           this.initStates(this.states, this.length);
-          this.$toasted.success('引き分けです！', toastedOptions);
+          this.$toasted.success('引き分けです！', this.toastedOptions);
         }
       },
       getWinnerId() {
