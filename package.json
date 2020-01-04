@@ -3,17 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --https",
     "build": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.4.4",
+    "node-sass": "^4.13.0",
     "register-service-worker": "^1.6.2",
-    "vue": "^2.6.10"
+    "sass-loader": "^8.0.0",
+    "vue": "^2.6.10",
+    "vue-toasted": "^1.1.27"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-pwa": "^4.1.0",
+    "@vue/cli-plugin-pwa": "^4.1.2",
     "@vue/cli-service": "^4.1.0",
     "vue-template-compiler": "^2.6.10"
   }

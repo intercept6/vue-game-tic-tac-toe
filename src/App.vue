@@ -1,24 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TicTacToe :property="property"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TicTacToe from "./components/TicTacToe";
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    TicTacToe
+  },
+  data() {
+    return {
+      property: {
+        magnification: 1
+      }
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Noto Mono',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
