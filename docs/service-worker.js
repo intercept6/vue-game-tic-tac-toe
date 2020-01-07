@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.c8e9e413d15cfe3e547267ea6bae4098.js"
+  "precache-manifest.3dca190a3f895bd62991f26a77790283.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-game-tic-tac-toe"});
