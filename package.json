@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --https",
     "build": "vue-cli-service build",
-    "release": "npm run build && git add -u docs/* && git commit -m \"release\" && git push"
+    "release": "npm run build && git add -A docs/* && git commit -m \"release\" && git push"
   },
   "dependencies": {
     "core-js": "^3.4.4",
