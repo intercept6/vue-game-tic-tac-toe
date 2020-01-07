@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "fonts/NotoMono-Regular.22be6139.ttf"
   },
   {
-    "revision": "b70565503b4ac1617dabb69603862d2a",
+    "revision": "2f8b2e19622d0415ad52ec36b117ffc0",
     "url": "index.html"
   },
   {
@@ -20,12 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/chunk-vendors.1695585e.js"
   },
   {
-    "revision": "a3649582ec1cf91824b6d5d35bcfed15",
+    "revision": "ecb7f68a4c223ffab20365f329ef41f0",
     "url": "manifest.json"
-  },
-  {
-    "revision": "e157dc45898a893d6b58016cb4516203",
-    "url": "manifest.webmanifest"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
