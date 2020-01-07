@@ -173,5 +173,4 @@
   .toasted {
     font-family: "Noto Mono",serif;
   }
-
 </style>
