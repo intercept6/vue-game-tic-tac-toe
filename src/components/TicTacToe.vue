@@ -33,7 +33,7 @@
         toastedOptions: {
           duration: 1000,
           position: "top-center",
-          className: toasted
+          className: "toasted"
         }
       }
     },
@@ -169,7 +169,7 @@
   h1 {
     text-shadow: 2px 2px 2px gray;
   }
-  
+
   .toasted {
     font-family: "Noto Mono",serif;
   }
