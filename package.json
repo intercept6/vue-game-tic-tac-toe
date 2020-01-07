@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --https",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "release": "npm run build && git add docs/* && git commit -m release && git push"
   },
   "dependencies": {
     "core-js": "^3.4.4",
